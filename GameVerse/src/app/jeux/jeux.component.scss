@@ -1,0 +1,84 @@
+.jeu-card {
+    background-color: #2B2B2B; /* Fond plus clair que celui de la home-container */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(125, 42, 232, 0.3); /* Effet néon léger */
+    color: #FFF;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    margin-top: 30px; /* Petite marge en haut */
+  }
+  
+  
+  .jeu-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px rgba(125, 42, 232, 1); /* Effet glow plus fort au survol */
+  }
+  
+  .jeu-header h2 {
+    font-size: 2rem;
+    color: #FFD700;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px #FFD700;
+    margin-bottom: 10px;
+  }
+  
+  .jeu-header p {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    margin-top: 5px;
+  }
+  
+  .jeu-info {
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  
+  .jeu-info p {
+    color: #FFF;
+    margin: 5px 0;
+  }
+  
+  .jeu-stock {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .available {
+    color: #7FFF00; /* Vert pour 'disponible' */
+  }
+  
+  .out-of-stock {
+    color: #FF5555; /* Rouge pour 'rupture de stock' */
+  }
+  
+  .cta-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-primary {
+    background-color: #7D2AE8;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 0px 15px rgba(125, 42, 232, 0.8);
+  }
+  
+  .btn-primary:hover {
+    background-color: #5A1EA6;
+    box-shadow: 0px 0px 25px rgba(125, 42, 232, 1);
+    transform: scale(1.05);
+  }
+  

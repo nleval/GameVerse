@@ -1,0 +1,60 @@
+.reservation-card {
+    background-color: #2B2B2B;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 400px;
+    box-shadow: 0px 0px 15px rgba(42, 232, 125, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reservation-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(42, 232, 125, 1);
+}
+
+.reservation-card h3 {
+    font-size: 1.6rem;
+    color: #ddd;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.reservation-card p {
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.reservation-card .button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: rgba(42, 232, 125, 0.8);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(42, 232, 125, 0.5);
+}
+
+.reservation-card .button:hover {
+    background-color: rgba(42, 232, 125, 1);
+    transform: scale(1.1);
+}
+
+/* Gestion des statuts */
+.en-attente {
+    color: orange;
+}
+
+.confirmee {
+    color: green;
+}
+
+.annulee {
+    color: red;
+}

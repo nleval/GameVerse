@@ -1,0 +1,99 @@
+/* ---- Réinitialisation de base ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* ---- Style général du body ---- */
+body {
+    background-color: #1A1A1A; /* Fond sombre */
+    color: white; /* Texte blanc */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ---- Titre principal ---- */
+h1 {
+    color: #FFD700; /* Doré futuriste */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 15px #FFD700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ---- Liens ---- */
+a {
+    text-decoration: none;
+    color: rgba(42, 232, 125, 0.8);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgba(42, 232, 125, 1);
+}
+
+/* ---- Conteneur principal ---- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #2B2B2B;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(125, 42, 232, 0.3);
+    margin: 30px auto;
+}
+
+/* ---- Boutons généraux ---- */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: rgba(42, 232, 125, 0.8); /* Vert néon */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(42, 232, 125, 0.5);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: rgba(42, 232, 125, 1);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(42, 232, 125, 1);
+}
+
+/* ---- Navigation ---- */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #2B2B2B;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(125, 42, 232, 0.3);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 80%;
+        text-align: center;
+    }
+}

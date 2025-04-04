@@ -1,0 +1,35 @@
+<div class="monForm">
+    <section class="subForm saisieForm">
+        <h2>Nouvelle Reservation</h2>
+        <form [formGroup]="formulaire">
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form_control" id="nom" formControlName="nom"/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form_control" id="email" formControlName="email"/>
+            </div>
+            <div class="form-group">
+                <label for="tel">Numero tel</label>
+                <input type="number" class="form_control" id="tel" formControlName="tel"/>
+            </div>
+            <div class="form-group">
+                <label for="idJeu">Jeu</label>
+                <input type="text" class="form_control" id="idJeu" formControlName="idJeu"/>
+            </div>
+            <div class="form-group">
+                <label for="plateforme">Plateforme</label>
+                <input type="text" class="form_control" id="plateforme" formControlName="plateforme"/>
+            </div>
+            <div class="form-group">
+                <label for="dateReservation">Date de reservation</label>
+                <input type="date" class="form_control" id="dateReservation" formControlName="dateReservation"/>
+            </div>
+            <div class="form-group">
+                <label for="nom">Statut</label>
+                <input type="statut" class="form_control" id="statut" formControlName="statut"/>
+            </div>
+        </form>
+    </section>
+</div>

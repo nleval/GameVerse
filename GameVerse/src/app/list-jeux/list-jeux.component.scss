@@ -1,0 +1,48 @@
+.list-jeux {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Toujours 3 colonnes
+    gap: 20px;
+    padding: 20px;
+    background-color: #1A1A1A; // Fond sombre
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(125, 42, 232, 0.3);
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+app-jeux {
+    background-color: #2B2B2B; // Fond des cartes
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 0px 15px rgba(125, 42, 232, 0.5); // Effet néon
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+app-jeux:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(125, 42, 232, 1); // Glow plus fort au survol
+}
+
+// Responsive : Si l'écran est plus petit que 900px, on passe à 2 colonnes
+@media (max-width: 900px) {
+    .list-jeux {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// Responsive : Si l'écran est plus petit que 600px, on passe à 1 colonne
+@media (max-width: 600px) {
+    .list-jeux {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+// Message si aucun jeu disponible
+.no-games {
+    color: #FF5555;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}

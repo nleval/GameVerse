@@ -1,0 +1,30 @@
+<div class="jeu-card">
+    <div class="jeu-header">
+      <h2>{{ theJeux.titre }}</h2>
+      <p class="jeu-date">Sortie le: {{ theJeux.dateDeSortie | date:'dd/MM/yyyy' }}</p>
+    </div>
+    
+    <div class="jeu-info">
+      <p><strong>Développeur:</strong> {{ theJeux.developpeur }}</p>
+      <p><strong>Plateformes:</strong> 
+        <span *ngFor="let plateforme of theJeux.plateforme; let isLast = last">
+          {{ plateforme }}<span *ngIf="!isLast">, </span>
+        </span>
+      </p>
+      <p><strong>Genre:</strong> 
+        <span *ngFor="let genre of theJeux.genre; let isLast = last">
+          {{ genre }}<span *ngIf="!isLast">, </span>
+        </span>
+      </p>
+    </div>
+    
+    <div class="jeu-stock">
+      <p *ngIf="theJeux.stockDisponible > 0" class="available">En stock: {{ theJeux.stockDisponible }} jeux</p>
+      <p *ngIf="theJeux.stockDisponible <= 0" class="out-of-stock">Rupture de stock</p>
+    </div>
+    
+    <p *ngIf="idJeux === undefined">
+      <a routerLink="/jeux/{{ theJeux.id }}" class="button-primary">Voir le détail</a>
+    </p>
+  </div>
+  

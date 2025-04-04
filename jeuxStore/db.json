@@ -1,0 +1,127 @@
+{
+  "Jeux": [
+    {
+      "id": 1,
+      "titre": "Doki Doki Literature Club",
+      "plateforme": ["PC", "Switch", "PlayStation", "Xbox"],
+      "genre": ["Visual Novel", "Psychological Horror"],
+      "developpeur": "Team Salvato",
+      "dateDeSortie": "2017-09-22",
+      "stockDisponible": 15
+    },
+    {
+      "id": 2,
+      "titre": "The Legend of Zelda: Tears of the Kingdom",
+      "plateforme": ["Switch"],
+      "genre": ["Action", "Aventure"],
+      "developpeur": "Nintendo",
+      "dateDeSortie": "2023-05-12",
+      "stockDisponible": 20
+    },
+    {
+      "id": 3,
+      "titre": "FC 25",
+      "plateforme": ["PC", "PlayStation", "Xbox", "Switch"],
+      "genre": ["Sport"],
+      "developpeur": "EA Sports",
+      "dateDeSortie": "2024-09-27",
+      "stockDisponible": 25
+    },
+    {
+      "id": 4,
+      "titre": "Madden NFL 25",
+      "plateforme": ["PC", "PlayStation", "Xbox"],
+      "genre": ["Sport"],
+      "developpeur": "EA Sports",
+      "dateDeSortie": "2024-08-16",
+      "stockDisponible": 18
+    },
+    {
+      "id": 5,
+      "titre": "The Last of Us",
+      "plateforme": ["PlayStation"],
+      "genre": ["Action", "Aventure"],
+      "developpeur": "Naughty Dog",
+      "dateDeSortie": "2013-06-14",
+      "stockDisponible": 14
+    },
+    {
+      "id": 6,
+      "titre": "The Last of Us Part II",
+      "plateforme": ["PlayStation"],
+      "genre": ["Action", "Aventure"],
+      "developpeur": "Naughty Dog",
+      "dateDeSortie": "2020-06-19",
+      "stockDisponible": 10
+    },
+    {
+      "id": 7,
+      "titre": "Outer Wilds",
+      "plateforme": ["PC", "PlayStation", "Xbox", "Switch"],
+      "genre": ["Aventure", "Exploration"],
+      "developpeur": "Mobius Digital",
+      "dateDeSortie": "2019-05-28",
+      "stockDisponible": 7
+    },
+    {
+      "id": 8,
+      "titre": "Miside",
+      "plateforme": ["PC"],
+      "genre": ["Psychological Horror", "Aventure", "Simulation"],
+      "developpeur": "Aihasto",
+      "dateDeSortie": "2024-10-11",
+      "stockDisponible": 30
+    },
+    {
+      "id": 9,
+      "titre": "Minecraft",
+      "plateforme": ["PC", "Switch", "PlayStation", "Xbox"],
+      "genre": ["Sandbox", "Survie"],
+      "developpeur": "Mojang Studios",
+      "dateDeSortie": "2011-11-18",
+      "stockDisponible": 50
+    }
+  ],
+  "Reservation": [
+    {
+      "id": 1,
+      "nom": "Noah Chapeau",
+      "email": "ichBinEinBerliner@gmail.com",
+      "tel": "07 69 42 69 42",
+      "idJeu": "1",
+      "plateforme": "Xbox",
+      "dateReservation": "2021-03-03",
+      "statut": "En attente"
+    },
+    {
+      "id": 2,
+      "nom": "Lina Dupont",
+      "email": "lina.dupont@email.com",
+      "tel": "06 23 45 67 89",
+      "idJeu": "3",
+      "plateforme": "PC",
+      "dateReservation": "2022-04-15",
+      "statut": "Confirmée"
+    },
+    {
+      "id": 3,
+      "nom": "Hugo Martin",
+      "email": "hugomartin@hotmail.fr",
+      "tel": "07 11 22 33 44",
+      "idJeu": "2",
+      "plateforme": "PlayStation",
+      "dateReservation": "2023-01-01",
+      "statut": "En attente"
+    },
+    {
+      "id": 4,
+      "nom": "Camille Lefèvre",
+      "email": "camille.lefevre@example.org",
+      "tel": "06 98 76 54 32",
+      "idJeu": "4",
+      "plateforme": "Switch",
+      "dateReservation": "2023-10-10",
+      "statut": "Annulée"
+    }
+  ]
+}

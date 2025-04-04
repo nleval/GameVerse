@@ -1,0 +1,33 @@
+.list-reservation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 20px;
+    padding: 20px;
+    background-color: #1A1A1A; /* Fond sombre */
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(125, 42, 232, 0.3); /* Effet néon */
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+/* Styles des cartes de réservation */
+app-reservation {
+    background-color: #2B2B2B; /* Fond des cartes */
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 0px 15px rgba(42, 232, 125, 0.5); /* Effet néon vert */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+app-reservation:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(42, 232, 125, 1); /* Glow plus fort au survol */
+}
+
+/* Responsive : 1 colonne en dessous de 800px */
+@media (max-width: 800px) {
+    .list-reservation {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,13 @@
+<div class="reservation-card">
+    <h3>{{ theReservation.nom }}</h3>
+
+    <p><strong>Email :</strong> {{ theReservation.email }}</p>
+    <p><strong>Téléphone :</strong> {{ theReservation.tel }}</p>
+    <p><strong>Plateforme :</strong> {{ theReservation.plateforme }}</p>
+    <p><strong>Date de réservation :</strong> {{ theReservation.dateReservation | date: 'dd/MM/yyyy' }}</p>
+    <p><strong>Statut :</strong> {{ theReservation.statut }}</p>
+
+    <p *ngIf="idReservation === undefined">
+        <a routerLink="/reservation/{{ theReservation.id }}" class="button">Voir le détail</a>
+    </p>
+</div>

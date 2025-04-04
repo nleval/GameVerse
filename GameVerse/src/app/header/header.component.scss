@@ -1,0 +1,61 @@
+/* Style du titre */
+h1 {
+    color: #FFD700; /* Doré */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px #FFD700;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Style de la navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les boutons */
+    background-color: #2B2B2B; /* Fond sombre */
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(125, 42, 232, 0.3); /* Effet néon léger */
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Style des liens de navigation */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: rgba(42, 232, 125, 0.8); /* Vert néon */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(42, 232, 125, 0.5);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Effet au survol */
+.button:hover {
+    background-color: rgba(42, 232, 125, 1);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(42, 232, 125, 1);
+}
+
+/* Responsive : ajustement pour petits écrans */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 80%; /* Les boutons prennent plus de place sur mobile */
+        text-align: center;
+    }
+}
