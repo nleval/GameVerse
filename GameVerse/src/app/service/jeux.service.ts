@@ -12,11 +12,11 @@ export class JeuxService {
 
   getJeux(): Observable<Jeux[]> 
   {
-    return this.http.get<Jeux[]>('http://localhost:3001/Jeux');
+    return this.http.get<Jeux[]>('http://localhost:3000/Jeux');
   }
 
   getJeuxById(id: number) : Observable<Jeux> 
   {
-    return this.http.get<Jeux>('http://localhost:3001/Jeux/' + id);
+    return this.http.get<Jeux>('http://localhost:3000/Jeux/' + id);
   }  
 }

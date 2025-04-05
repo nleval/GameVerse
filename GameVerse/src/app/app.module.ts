@@ -13,6 +13,9 @@ import { ListReservationComponent } from './list-reservation/list-reservation.co
 import { HeaderComponent } from './header/header.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NewReservationComponent } from './new-reservation/new-reservation.component';
+import { FiltreComponent } from './filtre/filtre.component';
+import { FiltreJeuxComponent } from './filtre-jeux/filtre-jeux.component';
+import { FiltreReservationComponent } from './filtre-reservation/filtre-reservation.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { NewReservationComponent } from './new-reservation/new-reservation.compo
     ReservationComponent,
     ListReservationComponent,
     HeaderComponent,
-    NewReservationComponent
+    NewReservationComponent,
+    FiltreComponent,
+    FiltreJeuxComponent,
+    FiltreReservationComponent
   ],
   imports: [
     BrowserModule,

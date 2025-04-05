@@ -6,6 +6,9 @@ import { JeuxComponent } from './jeux/jeux.component';
 import { ListReservationComponent } from './list-reservation/list-reservation.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { NewReservationComponent } from './new-reservation/new-reservation.component';
+import { FiltreComponent } from './filtre/filtre.component';
+import { FiltreJeuxComponent } from './filtre-jeux/filtre-jeux.component';
+import { FiltreReservationComponent } from './filtre-reservation/filtre-reservation.component';
 
 const routes: Routes = [
   {
@@ -31,6 +34,18 @@ const routes: Routes = [
   {
     path : 'new',
     component: NewReservationComponent
+  },
+  {
+    path : 'filtre',
+    component: FiltreComponent
+  },
+  {
+    path : 'filtre/jeux',
+    component: FiltreJeuxComponent
+  },
+  {
+    path : 'filtre/reservation',
+    component: FiltreReservationComponent
   }
 ];
 

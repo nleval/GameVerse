@@ -14,12 +14,15 @@ export class ListReservationComponent {
   constructor(private myReservationService: ReservationService) {}
 
   ngOnInit(): void {
-    this.myReservationService.getReservation().subscribe({
-      next: (reservation) => {
-        // Log des jeux reçus dans la réponse
-        this.listReservation = reservation;  // Affectation des jeux à la liste
+      const state = history.state as { reservationAffiche?: Reservation[] };
+  
+      if (state.reservationAffiche && state.reservationAffiche.length > 0) {
+        this.listReservation = state.reservationAffiche;
+      } else {
+        this.myReservationService.getReservation().subscribe((reservation) => {
+          this.listReservation = reservation;
+        });
       }
-    });
   }
 
 }

@@ -1,0 +1,33 @@
+/* Style du conteneur des boutons */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacement entre les boutons */
+    margin-top: 20px;
+}
+
+/* Style des boutons */
+.filter-button {
+    background-color: #42a5f5; /* Bleu clair */
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Effet au survol */
+.filter-button:hover {
+    background-color: #1e88e5; /* Bleu plus foncé */
+    transform: scale(1.05);
+}
+
+/* Effet au focus */
+.filter-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(66, 165, 245, 0.7); /* Ombre bleue au focus */
+}

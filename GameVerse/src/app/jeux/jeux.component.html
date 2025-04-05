@@ -1,3 +1,6 @@
+<p *ngIf="idJeux !== undefined">
+  <app-header></app-header>
+</p>
 <div class="jeu-card">
     <div class="jeu-header">
       <h2>{{ theJeux.titre }}</h2>
@@ -24,7 +27,7 @@
     </div>
     
     <p *ngIf="idJeux === undefined">
-      <a routerLink="/jeux/{{ theJeux.id }}" class="button-primary">Voir le détail</a>
+      <a routerLink="/jeux/{{ theJeux.id }}" class="button">Voir le détail</a>
     </p>
   </div>
   

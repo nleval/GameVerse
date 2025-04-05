@@ -1,35 +1,157 @@
-<div class="monForm">
-    <section class="subForm saisieForm">
-        <h2>Nouvelle Reservation</h2>
-        <form [formGroup]="formulaire">
+<app-header></app-header>
+<div class="container">
+    <div class="form-container">
+      <h2>Ajouter une reservation</h2>
+      <form [formGroup]="formulaire" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="nom">Nom</label>
-                <input type="text" class="form_control" id="nom" formControlName="nom"/>
+                <div class="input">
+                    <input type="text" class="form_control" id="nom" formControlName="nom"/>
+                    
+                    <div *ngIf="formulaire.get('nom')?.invalid && formulaire.get('nom')?.errors &&
+                                (formulaire.get('nom')?.dirty || formulaire.get('nom')?.touched)">
+                        
+                        <small class="text-danger" *ngIf="formulaire.get('nom')?.hasError('required')">
+                            Ce champ est requis.
+                        </small>
+                        
+                        <small class="text-danger" *ngIf="formulaire.get('nom')?.hasError('minlength')">
+                            Ce champ doit comporter au moins 6 caractères.
+                        </small>
+                    </div>
+                </div>
             </div>
+
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" class="form_control" id="email" formControlName="email"/>
+                <div class="input">
+                    <input type="text" class="form_control" id="email" formControlName="email"/>
+                    
+                    <div *ngIf="formulaire.get('email')?.invalid && formulaire.get('email')?.errors &&
+                                (formulaire.get('email')?.dirty || formulaire.get('email')?.touched)">
+                        
+                        <small class="text-danger" *ngIf="formulaire.get('email')?.hasError('required')">
+                            Ce champ est requis.
+                        </small>
+                        
+                        <small class="text-danger" *ngIf="formulaire.get('email')?.hasError('pattern')">
+                            Ce champ doit être une adresse email valide (exemple&#64;exemple.fr).
+                        </small>
+                    </div>
+                </div>
             </div>
+
             <div class="form-group">
                 <label for="tel">Numero tel</label>
-                <input type="number" class="form_control" id="tel" formControlName="tel"/>
+                <div class="input">
+                    <input type="tel" class="form_control" id="tel" formControlName="tel"/>
+                    
+                    <div *ngIf="formulaire.get('tel')?.invalid && formulaire.get('tel')?.errors &&
+                                (formulaire.get('tel')?.dirty || formulaire.get('tel')?.touched)">
+                        
+                        <small class="text-danger" *ngIf="formulaire.get('tel')?.hasError('required')">
+                            Ce champ est requis.
+                        </small>
+                        
+                        <small class="text-danger" *ngIf="formulaire.get('tel')?.hasError('pattern')">
+                            Ce champ doit être un numero de telephone valide (06 50 46 87 12).
+                        </small>
+                    </div>
+                </div>
             </div>
+
             <div class="form-group">
-                <label for="idJeu">Jeu</label>
-                <input type="text" class="form_control" id="idJeu" formControlName="idJeu"/>
+                <label for="jeux">Jeux</label>
+                <div class="input">
+                    <select class="form_control" id="jeux" formControlName="jeux">
+                        <ng-container *ngFor="let unJeux of listJeux">
+                            <ng-container *ngIf="unJeux.stockDisponible > 0">
+                                <option [value]=unJeux.titre>{{ unJeux.titre }}</option>
+                            </ng-container>
+                        </ng-container>
+                    </select>
+                    
+                    <div *ngIf="formulaire.get('jeux')?.invalid && formulaire.get('jeux')?.errors &&
+                                (formulaire.get('jeux')?.dirty || formulaire.get('jeux')?.touched)">
+                        
+                        <small class="text-danger" *ngIf="formulaire.get('tel')?.hasError('required')">
+                            Ce champ est requis.
+                        </small>
+                    </div>
+                </div>
             </div>
+            
             <div class="form-group">
                 <label for="plateforme">Plateforme</label>
-                <input type="text" class="form_control" id="plateforme" formControlName="plateforme"/>
+                <select class="form_control" id="plateforme" formControlName="plateforme">
+                    <option value="Xbox">Xbox</option>
+                    <option value="PC">PC</option>
+                    <option value="Switch">Switch</option>
+                    <option value="PlayStation">PlayStation</option>
+                </select>
+                
+                <div *ngIf="formulaire.get('plateforme')?.invalid && formulaire.get('plateforme')?.errors &&
+                            (formulaire.get('plateforme')?.dirty || formulaire.get('plateforme')?.touched)">
+                    
+                    <small class="text-danger" *ngIf="formulaire.get('plateforme')?.hasError('required')">
+                        Ce champ est requis.
+                    </small>
+                </div>
             </div>
+
             <div class="form-group">
                 <label for="dateReservation">Date de reservation</label>
-                <input type="date" class="form_control" id="dateReservation" formControlName="dateReservation"/>
+                <div class="input">
+                    <input type="date" class="form_control" id="dateReservation" formControlName="dateReservation"/>
+                    
+                    <div *ngIf="formulaire.get('dateReservation')?.invalid && formulaire.get('dateReservation')?.errors &&
+                                (formulaire.get('dateReservation')?.dirty || formulaire.get('dateReservation')?.touched)">
+                        
+                        <small class="text-danger" *ngIf="formulaire.get('dateReservation')?.hasError('required')">
+                            Ce champ est requis.
+                        </small>
+                        
+                        <small class="text-danger" *ngIf="formulaire.get('dateReservation')?.hasError('dateBeforeOrToday')">
+                            La date doit être aujourd'hui ou antérieure.
+                        </small>
+                    </div>
+                </div>
             </div>
+
             <div class="form-group">
-                <label for="nom">Statut</label>
-                <input type="statut" class="form_control" id="statut" formControlName="statut"/>
+                <label for="statut">Statut</label>
+                <select class="form_control" id="statut" formControlName="statut">
+                    <option value="Confirmée">Confirmée</option>
+                    <option value="En attente">En attente</option>
+                    <option value="Annulée">Annulée</option>
+                </select>
+                
+                <div *ngIf="formulaire.get('statut')?.invalid && formulaire.get('statut')?.errors &&
+                            (formulaire.get('statut')?.dirty || formulaire.get('statut')?.touched)">
+                    
+                    <small class="text-danger" *ngIf="formulaire.get('statut')?.hasError('required')">
+                        Ce champ est requis.
+                    </small>
+                </div>
             </div>
+
+            <!-- <button type="submit">Ajouter le CD</button> -->
+            <button type="submit" [disabled]="formulaire.invalid">Ajouter le CD</button>
         </form>
-    </section>
+    </div>
+
+    <div class="preview-container" *ngIf="currentReservation.nom">
+        <h2>Prévisualisation</h2>
+        <div class="reservation-details">
+            <div class="reservation-info">
+                <h3>{{ currentReservation.nom }}</h3>
+                <p>Email: {{ currentReservation.email }}</p>
+                <p>Tel: {{ currentReservation.tel }}</p>
+                <p>Jeux: {{ currentReservation.jeux }}</p>
+                <p>Plateforme: {{ currentReservation.plateforme }}</p>
+                <p>Date de reservation: {{ currentReservation.dateReservation | date }}</p>
+                <p>Statut: {{ currentReservation.statut }}</p>
+            </div>
+        </div>
+    </div>
 </div>

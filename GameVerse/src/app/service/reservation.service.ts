@@ -12,11 +12,29 @@ export class ReservationService {
 
   getReservation(): Observable<Reservation[]> 
   {
-    return this.http.get<Reservation[]>('http://localhost:3001/Reservation');
+    return this.http.get<Reservation[]>('http://localhost:3000/Reservation');
   }
 
   getReservationById(id: number) : Observable<Reservation> 
   {
-    return this.http.get<Reservation>('http://localhost:3001/Reservation/' + id);
-  }  
+    return this.http.get<Reservation>('http://localhost:3000/Reservation/' + id);
+  }
+
+  getNbReservation(): Observable<number>
+  {
+    return this.http.get<number>('http://localhost:3000/Reservation/count'); //marche pas
+  }
+
+  addReservation(reservation: Reservation): Observable<Reservation> 
+  {
+    return this.http.post<Reservation>('http://localhost:3000/Reservation', reservation);
+  }
+  updateReservation(reservation: Reservation): Observable<Reservation> 
+  {
+    return this.http.put<Reservation>('http://localhost:3000/Reservation/' + reservation.id, reservation);
+  }
+  deleteReservation(id: string): Observable<void> 
+  {
+    return this.http.delete<void>('http://localhost:3000/Reservation/' + id);
+  }
 }

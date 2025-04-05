@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<div class="filtre-wrapper">
+  <div class="button-group">
+    <button (click)="onJeuxClick()" class="btn btn-secondary">Jeux</button>
+  </div>
+
+  <h2>Filtrer les reservations</h2>
+
+  <form [formGroup]="formulaireReservation" (ngSubmit)="onSubmitReservation()" class="filtre-form">
+    <!-- Plateforme -->
+    <div class="form-group">
+      <label for="plateforme">Plateforme</label>
+      <select id="plateforme" formControlName="plateforme" class="form-control">
+        <option value="">-- Sélectionnez une plateforme --</option>
+        <ng-container *ngFor="let plateforme of listPlateforme">
+          <option [value]="plateforme">{{ plateforme }}</option>
+        </ng-container>
+      </select>
+    </div>
+
+    <!-- Jeux -->
+    <div class="form-group">
+      <label for="jeux">Jeux</label>
+      <select id="jeux" formControlName="jeux" class="form-control">
+        <option value="">-- Sélectionnez un jeu --</option>
+        <ng-container *ngFor="let jeux of listJeu">
+          <option [value]="jeux">{{ jeux }}</option>
+        </ng-container>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Filtrer</button>
+  </form>
+</div>

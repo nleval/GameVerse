@@ -14,6 +14,14 @@ export class ListJeuxComponent {
   constructor(private myJeuxService: JeuxService) {}
 
   ngOnInit(): void {
-    this.myJeuxService.getJeux().subscribe((jeux) => {this.listJeux = jeux});
+    const state = history.state as { jeuxAffiche?: Jeux[] };
+
+    if (state.jeuxAffiche && state.jeuxAffiche.length > 0) {
+      this.listJeux = state.jeuxAffiche;
+    } else {
+      this.myJeuxService.getJeux().subscribe((jeux) => {
+        this.listJeux = jeux;
+      });
+    }
   }
 }

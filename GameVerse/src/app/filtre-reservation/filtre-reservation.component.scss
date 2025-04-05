@@ -1,0 +1,161 @@
+/* Global Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Fond sombre */
+    color: #fff; /* Texte en blanc */
+}
+  
+/* Wrapper for the Filter Form */
+.filtre-wrapper {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #1a1a1a; /* Fond sombre élégant */
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(125, 42, 232, 0.2); /* Ombre violette */
+    font-family: 'Orbitron', sans-serif; /* Police futuriste pour la charte graphique */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+/* Button Group for "Jeux" Button */
+.button-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+  
+.button-group .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    background-color: #FF6347; /* Rouge vibrant pour bouton */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+  
+.button-group .btn-secondary:hover {
+    background-color: #E55347;
+    box-shadow: 0 0 15px rgba(255, 99, 71, 1);
+    transform: scale(1.05);
+}
+
+/* Filter Form Styling */
+.filtre-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+  
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+  
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #FFD700; /* Jaune Néon pour les labels */
+    text-shadow: 0 0 5px #FFD700;
+}
+  
+.form-control {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #7D2AE8; /* Violet Néon pour les bordures */
+    background-color: #2B2B2B; /* Fond sombre pour la saisie */
+    color: #fff;
+    box-shadow: 0 0 10px rgba(125, 42, 232, 0.3); /* Ombre violette pour les champs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.form-control:focus {
+    border-color: #FFD700; /* Jaune Néon en focus */
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* Jaune clair pour le focus */
+}
+  
+select {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #7D2AE8; /* Violet Néon */
+    background-color: #2B2B2B; /* Fond sombre */
+    color: #fff;
+    box-shadow: 0 0 10px rgba(125, 42, 232, 0.3); /* Ombre violette */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+  
+select:focus {
+    border-color: #FFD700; /* Jaune Néon au focus */
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+  
+button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: #7D2AE8; /* Violet Néon pour le bouton */
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(125, 42, 232, 0.8); /* Ombre violette */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+  
+button[type="submit"]:hover {
+    background-color: #5A1EA6; /* Violet plus sombre au hover */
+    box-shadow: 0 0 25px rgba(125, 42, 232, 1); /* Ombre violette plus intense */
+    transform: scale(1.05); /* Effet de zoom */
+}
+  
+button[type="submit"]:active {
+    transform: scale(1.02); /* Effet de pression sur le bouton */
+}
+  
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .filtre-wrapper {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+  
+    .button-group .btn-secondary {
+        width: 100%;
+        padding: 1rem;
+    }
+  
+    .filtre-form {
+        width: 100%;
+    }
+  
+    .form-group {
+        width: 100%;
+    }
+  
+    .form-control,
+    select {
+        width: 100%;
+    }
+  
+    button[type="submit"] {
+        width: 100%;
+        padding: 1rem;
+    }
+}
